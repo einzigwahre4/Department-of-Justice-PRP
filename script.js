@@ -182,12 +182,14 @@ if (lawSearchInput) {
    ENTER-TASTE FÜR SUCHE
 ========================================= */
 
-document
-    .getElementById("searchInput")
-    .addEventListener("keydown", function(event) {
+if (lawSearchInput) {
+
+    lawSearchInput.addEventListener("keydown", function(event) {
 
         if (event.key === "Enter") {
-            searchLaw();
+            searchLaws();
         }
 
     });
+
+}
