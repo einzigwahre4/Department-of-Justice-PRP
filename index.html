@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Department of Justice | Gesetzesportal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-seal">⚖</div>
+
+            <div>
+                <h1>DEPARTMENT OF JUSTICE</h1>
+                <span>Gesetzes- & Justizportal</span>
+            </div>
+        </div>
+
+        <div class="rp-notice">
+            FIKTIONALES RP-PROJEKT
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         LAYOUT
+    ========================== -->
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                GESETZBÜCHER
+            </div>
+
+            <button class="nav-button active" onclick="showSection('home')">
+                🏛 Startseite
+            </button>
+
+            <button class="nav-button" onclick="showSection('grundgesetz')">
+                📜 Grundgesetz
+            </button>
+
+            <button class="nav-button" onclick="showSection('strafgesetzbuch')">
+                ⚖ Strafgesetzbuch
+            </button>
+
+            <button class="nav-button" onclick="showSection('stvo')">
+                🚗 Straßenverkehrsordnung
+            </button>
+
+            <button class="nav-button" onclick="showSection('waffengesetz')">
+                🔫 Waffengesetz
+            </button>
+
+            <div class="sidebar-title">
+                JUSTIZ
+            </div>
+
+            <button class="nav-button" onclick="showSection('urteile')">
+                🏛 Urteile
+            </button>
+
+            <button class="nav-button" onclick="showSection('news')">
+                📰 Bekanntmachungen
+            </button>
+
+            <button class="nav-button" onclick="showSection('chiefjustice')">
+                👨‍⚖️ Chief Justice
+            </button>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+        <main class="content">
+
+            <!-- SEARCH -->
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Gesetze, Artikel oder Begriffe suchen..."
+                    oninput="searchLaw()"
+                >
+
+                <button onclick="searchLaw()">
+                    Suchen
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 STARTSEITE
+            ========================== -->
+            <section id="home" class="page-section active">
+
+                <div class="hero">
+
+                    <span class="eyebrow">
+                        DEPARTMENT OF JUSTICE
+                    </span>
+
+                    <h2>
+                        Gesetzes- & Justizportal
+                    </h2>
+
+                    <p>
+                        Willkommen im zentralen Gesetzesportal des
+                        Department of Justice.
+                    </p>
+
+                    <p class="muted">
+                        Hier findest du die geltenden Gesetze,
+                        Verordnungen und rechtlichen Bestimmungen
+                        des Staates.
+                    </p>
+
+                </div>
+
+
+                <div class="card-grid">
+
+                    <div class="info-card"
+                         onclick="showSection('grundgesetz')">
+
+                        <div class="card-icon">📜</div>
+
+                        <h3>Grundgesetz</h3>
+
+                        <p>
+                            Grundlegende Rechte, Pflichten und
+                            verfassungsrechtliche Bestimmungen.
+                        </p>
+
+                        <span class="card-link">
+                            Gesetzbuch öffnen →
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-card"
+                         onclick="showSection('strafgesetzbuch')">
+
+                        <div class="card-icon">⚖</div>
+
+                        <h3>Strafgesetzbuch</h3>
+
+                        <p>
+                            Straftatbestände, Strafrahmen und
+                            weitere strafrechtliche Bestimmungen.
+                        </p>
+
+                        <span class="card-link">
+                            Gesetzbuch öffnen →
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-card"
+                         onclick="showSection('stvo')">
+
+                        <div class="card-icon">🚗</div>
+
+                        <h3>Straßenverkehrsordnung</h3>
+
+                        <p>
+                            Vorschriften und Regelungen
+                            zum öffentlichen Straßenverkehr.
+                        </p>
+
+                        <span class="card-link">
+                            Gesetzbuch öffnen →
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-card"
+                         onclick="showSection('waffengesetz')">
+
+                        <div class="card-icon">🔫</div>
+
+                        <h3>Waffengesetz</h3>
+
+                        <p>
+                            Regelungen zum Besitz, Führen und
+                            Umgang mit Waffen.
+                        </p>
+
+                        <span class="card-link">
+                            Gesetzbuch öffnen →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 GRUNDGESETZ
+            ========================== -->
+            <section id="grundgesetz"
+                     class="page-section law-section">
+
+                <div class="law-header">
+
+                    <span class="eyebrow">
+                        DEPARTMENT OF JUSTICE
+                    </span>
+
+                    <h2>Grundgesetz [GG]</h2>
+
+                    <p>
+                        Verfassung des Staates
+                    </p>
+
+                </div>
+
+
+                <div id="grundgesetz-content">
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 1 – Menschenwürde, Geltungsbereich</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Die Würde des Menschen ist unantastbar.
+                            Sie zu achten und zu schützen ist Verpflichtung
+                            aller staatlichen Gewalten.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Die nachfolgenden Grundrechte binden
+                            Gesetzgebung, vollziehende Gewalt und
+                            Rechtsprechung als unmittelbar geltendes Recht.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Cayo Perico ist ein unabhängiger Inselstaat.
+                            Für diesen gelten die hier genannten
+                            innerstaatlichen Gesetze nicht.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 2 – Persönlichkeitsrechte und körperliche Unversehrtheit</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Jeder hat das Recht auf freie Entfaltung
+                            seiner Persönlichkeit, soweit er nicht die
+                            Rechte anderer verletzt und nicht gegen die
+                            verfassungsmäßige Ordnung oder das Sittengesetz verstößt.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Jeder hat das Recht auf Leben und körperliche
+                            Unversehrtheit.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Die Freiheit der Person ist unverletzlich.
+                            In diese Rechte darf nur aufgrund eines Gesetzes
+                            eingegriffen werden.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 3 – Gleichheit vor dem Gesetz</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Alle Menschen sind vor dem Gesetz gleich.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Männer und Frauen sind gleichberechtigt.
+                            Der Staat fördert die tatsächliche Durchsetzung
+                            der Gleichberechtigung und wirkt auf die Beseitigung
+                            bestehender Nachteile hin.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Niemand darf wegen Geschlecht, Abstammung,
+                            ethnischer Herkunft, Sprache, Herkunft, Glauben,
+                            religiöser oder politischer Anschauung benachteiligt
+                            oder bevorzugt werden.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(4)</strong>
+                            Niemand darf wegen einer Behinderung
+                            benachteiligt werden.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 4 – Glaubens- und Gewissensfreiheit</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Die Freiheit des Glaubens, des Gewissens sowie
+                            das religiöse und weltanschauliche Bekenntnis
+                            sind unverletzlich.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Die ungestörte Ausübung der Religion
+                            wird gewährleistet.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 5 – Meinungs-, Informations- und Pressefreiheit</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Jeder hat das Recht, seine Meinung in Wort,
+                            Schrift und Bild frei zu äußern und zu verbreiten
+                            sowie sich aus allgemein zugänglichen Quellen
+                            ungehindert zu unterrichten.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Die Pressefreiheit sowie die Freiheit der
+                            Berichterstattung durch Rundfunk und Film
+                            sind gewährleistet. Eine Zensur findet nicht statt.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Diese Rechte finden ihre Schranken in den
+                            allgemeinen Gesetzen, dem Jugendschutz und
+                            dem Schutz der persönlichen Ehre.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(4)</strong>
+                            Kunst, Wissenschaft, Forschung und Lehre sind frei.
+                            Die Freiheit der Lehre entbindet nicht von der
+                            Treue zur Verfassung.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 6 – Versammlungsfreiheit</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Alle Bürgerinnen und Bürger haben das Recht,
+                            sich ohne Anmeldung oder Erlaubnis friedlich
+                            und ohne Waffen zu versammeln.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Für Versammlungen unter freiem Himmel kann
+                            dieses Recht durch Gesetz oder auf Grundlage
+                            eines Gesetzes eingeschränkt werden.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 7 – Unverletzlichkeit der Wohnung</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Die Wohnung ist unverletzlich.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Durchsuchungen dürfen nur durch richterlichen
+                            Beschluss erfolgen. Bei Gefahr im Verzug kann
+                            eine Anordnung auch durch gesetzlich bestimmte
+                            Organe erfolgen.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 8 – Kommunikationsgeheimnis</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Das Brief-, Post- und Fernmeldegeheimnis
+                            sind unverletzlich.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Eingriffe in das Kommunikationsgeheimnis
+                            dürfen nur auf richterliche Anordnung erfolgen.
+                            Ermittlungsbehörden können solche Maßnahmen
+                            beim Department of Justice beantragen.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Die Durchführung und Überwachung genehmigter
+                            Maßnahmen obliegt ausschließlich dem Department
+                            of Justice oder von diesem ausdrücklich
+                            ermächtigten Stellen.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 9 – Freizügigkeit</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Alle Bürgerinnen und Bürger genießen
+                            Freizügigkeit im gesamten Bundesgebiet.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 10 – Berufsfreiheit und Zwangsarbeit</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Jede Person hat das Recht, Beruf, Arbeitsplatz
+                            und Ausbildungsstätte frei zu wählen.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Die Ausübung des Berufs kann durch Gesetz
+                            oder auf Grundlage eines Gesetzes geregelt werden.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Niemand darf zu einer bestimmten Arbeit
+                            gezwungen werden, es sei denn, im Rahmen
+                            einer allgemeinen, gleichen Dienstleistungspflicht.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(4)</strong>
+                            Zwangsarbeit ist nur im Rahmen einer gerichtlich
+                            oder exekutiv angeordneten Freiheitsentziehung
+                            zulässig.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 11 – Petitionsrecht</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Jeder hat das Recht, sich einzeln oder gemeinsam
+                            mit anderen schriftlich mit Bitten oder Beschwerden
+                            an die zuständigen Stellen oder an die Volksvertretung
+                            zu wenden.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 12 – Einschränkung von Grundrechten</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Wird ein Grundrecht durch Gesetz oder auf Grundlage
+                            eines Gesetzes eingeschränkt, so muss dieses allgemein
+                            und nicht nur für den Einzelfall gelten.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Das Gesetz muss das betroffene Grundrecht unter
+                            Angabe des Artikels nennen.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            In keinem Fall darf der Wesensgehalt eines
+                            Grundrechts angetastet werden.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(4)</strong>
+                            Wird jemand durch öffentliche Gewalt in seinen
+                            Rechten verletzt, steht ihm der Rechtsweg offen.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(5)</strong>
+                            Soweit keine andere Zuständigkeit gegeben ist,
+                            ist der ordentliche Rechtsweg eröffnet.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(6)</strong>
+                            Art. 10 Abs. II Satz 2 bleibt unberührt.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 13 – Schutz von Eigentum</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Das Eigentum und das Erbrecht werden gewährleistet.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Inhalt und Schranken des Eigentums ergeben
+                            sich aus den Gesetzen.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Eine Enteignung ist nur zum Wohle der Allgemeinheit
+                            und nur auf gesetzlicher Grundlage zulässig.
+                            Sie erfolgt gegen angemessene Entschädigung.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 14 – Recht auf digitale Selbstbestimmung</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Jeder hat das Recht auf Schutz seiner persönlichen
+                            Daten und seiner digitalen Identität.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Der Staat schützt Bürgerinnen und Bürger vor
+                            unrechtmäßiger Überwachung und Datenmissbrauch.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Eingriffe in die digitale Sphäre dürfen nur auf
+                            Grundlage eines Gesetzes erfolgen und unterliegen
+                            gerichtlicher Kontrolle.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 15 – Umwelt- und Naturschutz</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Der Staat schützt die natürlichen Lebensgrundlagen
+                            und verpflichtet sich zum Erhalt von Umwelt
+                            und Artenvielfalt.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Jeder hat das Recht auf eine gesunde Umwelt.
+                            Eingriffe in Natur und Landschaft bedürfen
+                            einer behördlichen Genehmigung.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Unternehmen und Bürger haben Mitwirkungspflicht
+                            beim Erhalt einer intakten Umwelt.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 16 – Schutz von Ehe und Familie</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Ehe und Familie stehen unter dem besonderen
+                            Schutz der staatlichen Ordnung.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Pflege und Erziehung der Kinder sind das
+                            natürliche Recht der Eltern und die zuvörderst
+                            ihnen obliegende Pflicht.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Über deren Betätigung wacht die staatliche
+                            Gemeinschaft.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 17 – Staatsangehörigkeit und Asyl</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Die Staatsangehörigkeit wird durch Geburt,
+                            Einbürgerung oder Anerkennung durch das
+                            Department of Justice verliehen.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Politisch Verfolgte genießen Asylrecht,
+                            sofern sie sich im Staatsgebiet befinden.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(3)</strong>
+                            Über die Gewährung von Asyl entscheidet das
+                            Department of Justice in Zusammenarbeit
+                            mit dem Auswärtigen Amt.
+                        </div>
+
+                    </article>
+
+
+                    <article class="law-article">
+
+                        <h3>Artikel 18 – Treue zur Verfassung</h3>
+
+                        <div class="paragraph">
+                            <strong>(1)</strong>
+                            Wer die freiheitlich-demokratische Grundordnung
+                            bekämpft oder beseitigen will, verwirkt seine
+                            Grundrechte.
+                        </div>
+
+                        <div class="paragraph">
+                            <strong>(2)</strong>
+                            Die Verwirkung wird durch das DOJ ausgesprochen.
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 STRAFGESETZBUCH
+            ========================== -->
+            <section id="strafgesetzbuch"
+                     class="page-section placeholder-section">
+
+                <span class="eyebrow">GESETZBUCH</span>
+
+                <h2>Strafgesetzbuch</h2>
+
+                <p>
+                    Dieser Bereich wird mit dem Strafgesetzbuch
+                    ergänzt.
+                </p>
+
+                <div class="coming-soon">
+                    INHALT FOLGT
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 STVO
+            ========================== -->
+            <section id="stvo"
+                     class="page-section placeholder-section">
+
+                <span class="eyebrow">GESETZBUCH</span>
+
+                <h2>Straßenverkehrsordnung</h2>
+
+                <p>
+                    Dieser Bereich wird mit der
+                    Straßenverkehrsordnung ergänzt.
+                </p>
+
+                <div class="coming-soon">
+                    INHALT FOLGT
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 WAFFENGESETZ
+            ========================== -->
+            <section id="waffengesetz"
+                     class="page-section placeholder-section">
+
+                <span class="eyebrow">GESETZBUCH</span>
+
+                <h2>Waffengesetz</h2>
+
+                <p>
+                    Dieser Bereich wird mit dem Waffengesetz
+                    ergänzt.
+                </p>
+
+                <div class="coming-soon">
+                    INHALT FOLGT
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 URTEILE
+            ========================== -->
+            <section id="urteile"
+                     class="page-section placeholder-section">
+
+                <span class="eyebrow">JUSTIZ</span>
+
+                <h2>Urteile</h2>
+
+                <p>
+                    Hier können später rechtskräftige Urteile
+                    des Department of Justice veröffentlicht werden.
+                </p>
+
+                <div class="coming-soon">
+                    NOCH KEINE URTEILE VERÖFFENTLICHT
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 NEWS
+            ========================== -->
+            <section id="news"
+                     class="page-section placeholder-section">
+
+                <span class="eyebrow">DEPARTMENT OF JUSTICE</span>
+
+                <h2>Bekanntmachungen</h2>
+
+                <p>
+                    Hier erscheinen später offizielle
+                    Bekanntmachungen und Gesetzesänderungen
+                    für dein RP.
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 CHIEF JUSTICE
+            ========================== -->
+            <section id="chiefjustice"
+                     class="page-section placeholder-section">
+
+                <span class="eyebrow">DEPARTMENT OF JUSTICE</span>
+
+                <h2>Chief Justice</h2>
+
+                <div class="justice-card">
+
+                    <div class="justice-icon">
+                        ⚖
+                    </div>
+
+                    <div>
+                        <h3>Office of the Chief Justice</h3>
+
+                        <p>
+                            Oberste richterliche Instanz des
+                            Department of Justice.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <span>
+            © 2026 Department of Justice
+        </span>
+
+        <span>
+            Fiktives GTA-RP-Projekt · Keine echte Regierungsbehörde
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
