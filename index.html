@@ -89,20 +89,21 @@
         <main class="content">
 
             <!-- SEARCH -->
-            <div class="search-container">
+           <div class="search-container">
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Gesetze, Artikel oder Begriffe suchen..."
-                    oninput="searchLaw()"
-                >
+    <input
+        type="text"
+        id="lawSearch"
+        placeholder="Gesetz, Paragraph oder Begriff suchen..."
+    >
 
-                <button onclick="searchLaw()">
-                    Suchen
-                </button>
+    <button onclick="searchLaws()">
+        Suchen
+    </button>
 
-            </div>
+</div>
+
+<div id="searchResults"></div>
 
 
             <!-- =========================
