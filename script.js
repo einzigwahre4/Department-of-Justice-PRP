@@ -107,20 +107,31 @@ function searchLaws() {
                 </div>
             `;
 
-            result.addEventListener("click", () => {
+result.addEventListener("click", () => {
 
-                article.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
+    const section = article.closest(".page-section");
 
-                article.classList.add("search-highlight");
+    if (section) {
 
-                setTimeout(() => {
-                    article.classList.remove("search-highlight");
-                }, 2500);
+        showSection(section.id);
 
+        setTimeout(() => {
+
+            article.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
             });
+
+            article.classList.add("search-highlight");
+
+            setTimeout(() => {
+                article.classList.remove("search-highlight");
+            }, 2500);
+
+        }, 300);
+    }
+
+});
 
             searchResults.appendChild(result);
         }
